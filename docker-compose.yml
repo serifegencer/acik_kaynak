@@ -1,1 +1,10 @@
+version: '3.8'
 
+services:
+  web:
+    build: ./acik_kaynak
+    command: python3 ornek.py  -h 0.0.0.0
+    volumes:
+      - ./acik_kaynak/:/usr/src/app/
+    ports:
+      - 5001:5001
